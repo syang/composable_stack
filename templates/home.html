@@ -1,0 +1,7 @@
+{% extends '_layouts/base.html' %}
+
+{% block headline %}<h1>Homepage Headline: To Compase a Stack on Cloud</h1>{% endblock headline %}
+
+{% block content %}
+<p>Actions from user > {% if user.is_authenticated %} {{ user.username }}{% endif %}!</p>
+{% endblock content %}
