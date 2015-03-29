@@ -30,4 +30,6 @@
 
 ### Some Further Reading
 
+[Django Class View's Signature Reference](http://ccbv.co.uk/)
+
 [Following Django Recommended Layout](http://www.revsys.com/blog/2014/nov/21/recommended-django-project-layout/)
