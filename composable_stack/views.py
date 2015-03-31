@@ -6,6 +6,7 @@ from braces import views
 
 from .forms import RegistrationForm
 from .forms import LoginForm
+from talks.models import TalkList
 
 
 
@@ -24,6 +25,11 @@ class SignUpView(
     model = User
     success_url = reverse_lazy('login')
     template_name = 'accounts/signup.html'
+
+    def form_valid(self, form):
+        resp = super(SignUpView, self).form_valid(form)
+        TalkList.objects.create(user=self.object, name='To Attend')
+        return resp
 
 
 class LoginView(generic.FormView):
